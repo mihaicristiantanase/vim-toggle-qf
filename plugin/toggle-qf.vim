@@ -46,7 +46,7 @@ function! QFToggleFun()
     endif
   else
     " quickfix is not showing
-    :bo cw
+    :bo copen
   endif
 endfunction
 
