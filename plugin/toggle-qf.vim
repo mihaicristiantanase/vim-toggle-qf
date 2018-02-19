@@ -4,25 +4,25 @@
 function! QFMappingQFun()
   silent! unmap q
   if &filetype == 'qf'
-    nnoremap q p:ccl<CR>
+    nnoremap <silent> q p:ccl<CR>
   endif
 endfunction
 
 function! QFMappingLeaderQFun()
   silent! unmap <leader>q
   if &filetype == 'qf'
-    noremap <leader>q p:ccl<CR>
+    noremap <silent> <leader>q p:ccl<CR>
   else
-    noremap <leader>q :q!<CR>
+    noremap <silent> <leader>q :q!<CR>
   endif
 endfunction
 
 function! QFMappingLeaderBQFun()
   silent! unmap <leader>bq
   if &filetype == 'qf'
-    noremap <leader>bq p:ccl<CR>
+    noremap <silent> <leader>bq p:ccl<CR>
   else
-    noremap <leader>bq :bd!<CR>
+    noremap <silent> <leader>bq :bd!<CR>
   endif
 endfunction
 
@@ -40,9 +40,9 @@ function! QFToggleFun()
   if QFIsVisibleFFun() == 1
     " current buffer is not quickfix, but quickfix is visible
     if &filetype == 'qf'
-      execute 'normal p' | :ccl
+      execute 'normal p' | :silent ccl
     else
-      :ccl
+      :silent ccl
     endif
   else
     " quickfix is not showing
@@ -60,5 +60,5 @@ augroup qf
   autocmd BufReadPost,BufEnter * call QFMappingLeaderBQFun()
 augroup end
 
-nnoremap <F5> :call QFToggleFun()<CR>
-tnoremap <F5> <C-w>:call QFToggleFun()<CR>
+nnoremap <silent> <F5> :call QFToggleFun()<CR>
+tnoremap <silent> <F5> <C-w>:call QFToggleFun()<CR>
