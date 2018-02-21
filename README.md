@@ -46,4 +46,4 @@ vim-plug<br/>
 `Plug 'mihaicristiantanase/vim-toggle-qf'`
 
 Pathogen<br/>
-`git clone https://github.com/mihaicristiantanase/vim-toggle-qf ~/.vim/bundle/vim-husk`
+`git clone https://github.com/mihaicristiantanase/vim-toggle-qf ~/.vim/bundle/vim-toggle-qf`
