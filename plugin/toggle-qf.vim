@@ -61,4 +61,3 @@ augroup qf
 augroup end
 
 nnoremap <silent> <F5> :call QFToggleFun()<CR>
-tnoremap <silent> <F5> <C-w>:call QFToggleFun()<CR>
